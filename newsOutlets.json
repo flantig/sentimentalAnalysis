@@ -1,0 +1,34 @@
+{
+  "Entertainment": [
+    "https://www.yahoo.com/entertainment/",
+    "https://www.cnn.com/entertainment",
+    "https://abcnews.go.com/Entertainment",
+    "https://www.bbc.com/news/entertainment_and_arts"
+  ],
+  "Finance": [
+    "https://finance.yahoo.com",
+    "https://www.cnn.com/business",
+    "https://abcnews.go.com/Business/",
+    "https://www.bbc.com/news/business"
+  ],
+  "Politics": [
+    "https://news.yahoo.com/politics",
+    "https://www.cnn.com/politics",
+    "https://abcnews.go.com/Politics",
+    "https://www.bbc.com/news/politics"
+  ],
+  "World": [
+    "https://news.yahoo.com/world",
+    "https://www.cnn.com/world",
+    "https://abcnews.go.com/International",
+    "https://www.bbc.com/news/world"
+  ],
+  "Health": [
+    "https://news.yahoo.com/health",
+    "https://www.cnn.com/health",
+    "https://abcnews.go.com/Health",
+    "https://www.bbc.com/news/health"
+],
+  "newsOutlets": ["Yahoo", "CNN", "ABC News", "BBC"],
+  "topic": ["Entertainment", "Finance", "Politics", "World", "Health"]
+}
