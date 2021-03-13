@@ -1,4 +1,4 @@
-const mongoFun = require("./components/mongoNews");
+const mongoFun = require("./server/mongoNews");
 
 async function test () {
     const result = await mongoFun.getRandomNewsByTopic("Entertainment");
@@ -10,4 +10,3 @@ async function print() {
     console.log(test())
 }
 
-print()

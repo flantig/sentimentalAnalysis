@@ -23,7 +23,7 @@ module.exports = {
             await mongoClient.logout();
             return true;
         } else {
-            console.log("I will salt the earth with the remains of your corpse if you are attempting a brute force attack.")
+            console.log("I will salt the earth with your remains if you are attempting a brute force attack.")
             await mongoClient.logout();
             return false;
         }
@@ -92,6 +92,6 @@ module.exports = {
             return false;
         }
 
-    }
+    },
 
 }
