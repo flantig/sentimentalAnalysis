@@ -5,6 +5,10 @@ const mongoClient = new MongoClient(uri);
 
 module.exports = {
 
+    /**
+     * @param topicSelect: there are 5 topics the user gets to choose from ["Entertainment", "Finance", "Politics", "World", "Health"]
+     * @return random: It returns 5 random articles of the topic of choice
+     */
     getRandomNewsByTopic: async (topicSelect: string) => {
         await mongoClient.connect();
 
@@ -16,11 +20,15 @@ module.exports = {
         mongoClient.logout()
         return random;
     },
+    /**
+     * @param topicSelect: there are 5 topics the user gets to choose from ["Entertainment", "Finance", "Politics", "World", "Health"]
+     * @return allByTopic: gets all the entries within a single topic
+     */
     getAllByTopic: async (topicSelect: string) => {
         await mongoClient.connect();
-        const random = await mongoClient.db(`${credentials.database}`).collection(`${credentials.collection[0]}`).find({topic: topicSelect}).toArray();
+        const allByTopic = await mongoClient.db(`${credentials.database}`).collection(`${credentials.collection[0]}`).find({topic: topicSelect}).toArray();
         await mongoClient.logout();
-        return random;
+        return allByTopic;
     }
 
 };
