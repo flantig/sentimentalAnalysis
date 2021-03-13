@@ -82,9 +82,9 @@ module.exports = {
     doesUserExist: async (user: string) => {
         await mongoClient.connect();
 
-        const exists = (await mongoClient.db(`${credentials.database}`).collection(`${credentials.collection[1]}`).find().project({_id:0, username: user}).toArray()).length
+        const exists = await mongoClient.db(`${credentials.database}`).collection(`${credentials.collection[1]}`).find({username: user}).project({ _id: 0, password: 0, coins:0, newsReviewed:0, createdAt:0, lastLogged:0}).toArray()
 
-        if (exists > 0) {
+        if (exists.length > 0) {
             await mongoClient.logout();
             return true;
         } else {
